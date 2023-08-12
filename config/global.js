@@ -3,7 +3,7 @@ const configuration = {
     'github': {
         'clientId': 'ebfaff0a9d9098e3c586',
         'clientSecret': 'c3b443d15e1f55e398a6d8eb4ce9b5a910070bb5',
-        'callbackUrl': 'http://https://task-tracker-application.onrender.com/github/callback'
+        'callbackUrl': 'http://task-tracker-application.onrender.com/github/callback'
     }
 };
 module.exports = configuration;
