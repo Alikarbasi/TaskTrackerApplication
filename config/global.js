@@ -1,8 +1,8 @@
 const configuration = {
     'db' : 'mongodb+srv://akarbasi:Atlas2023%40a@cluster0.fprpnfq.mongodb.net/tasktracker',
     'github': {
-        'clientId': 'ebfaff0a9d9098e3c586',
-        'clientSecret': 'c3b443d15e1f55e398a6d8eb4ce9b5a910070bb5',
+        'clientId': 'd03b523ea5104c298230',
+        'clientSecret': 'dfc633f3c799d65bbaadf7ee4775dedd58001689',
         'callbackUrl': 'http://task-tracker-application.onrender.com/callback'
     }
 };
