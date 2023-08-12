@@ -1,0 +1,102 @@
+/* Add custom CSS styles */
+/* Add custom CSS styles */
+
+
+
+
+#taskTable{
+  padding-top: 30px;
+  width: 90%;
+  margin: auto;
+}
+#dropdown {
+  position: relative;
+  display: inline-block;
+  align-items: end;
+}
+
+#dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  right: 0; /* Align the dropdown to the right edge of the parent (#dropdown) */
+  top: 100%; /* Position the dropdown content below the #dropdown element */
+}
+
+#dropdown:hover .dropdown-content {
+  display: block;
+  padding-top: 30px;
+  width: 90%;
+  margin: auto;
+}
+#addTask{
+  margin-bottom: 10px;
+  text-align: center;
+}
+#addTaskHead{
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#classIndex{
+  background-image: url('https://img.freepik.com/premium-vector/artistic-abstract-background-with-minimal-elements-free-style-rectangular-shape_49459-687.jpg?w=2000'); 
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  margin: 0; 
+  padding: 0px; 
+  background-repeat: no-repeat;
+}
+#categoryTable{
+  padding-top: 30px;
+  width: 90%;
+  margin: auto;
+ 
+}
+#addCategoryBtn{
+ text-align: center;
+ margin-top: 10px;
+ padding-bottom: 10px;
+}
+#cards{
+  display: flex;
+  
+  align-items: center;
+  justify-content: space-around;
+  
+ 
+}
+#addDiv{
+  text-align: center;
+  font-size: medium;
+}
+input{
+  padding: 10px;
+  margin-bottom: 10px;
+}
+#addBody{
+  background-image: url('https://img.freepik.com/premium-vector/artistic-abstract-background-with-minimal-elements-free-style-rectangular-shape_49459-687.jpg?w=2000'); 
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  margin: 0; 
+  padding: 0px; 
+  background-repeat: no-repeat;
+}
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+#card2{
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  color: #f9f9f9;
+  border-radius: 10px;
+}

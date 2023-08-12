@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.1/dist/cerulean/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/public/stylesheets/taskstyle.css">
+</head>
+<body id="classIndex">
+    <h1 id="addTaskHead">Add A Task</h1>
+
+    {{#if user}}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div id="addTask">
+                    <a class="btn btn-dark add-task-button" href="/tasks/add">Add a Task</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                {{!-- Add the category filter dropdown --}}
+                <div class="form-group" id="dropdown">
+                    <select id="category-filter" class="form-control">
+                        <option value="">Filter By:</option>
+                        {{#each categories}}
+                        <option value="{{this.name}}">{{this.name}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/if}}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="taskTable">
+                    <table class="table table-dark">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Date</th>
+                                <th scope="col">Category</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Duration</th>
+                                <th scope="col">Comment</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each dataset}}
+                            <tr class="table">
+                                <td>{{toShortDate this.date}}</td>
+                                <td>{{this.category}}</td>
+                                <td>{{this.name}}</td>
+                                <td>{{this.duration.hours}}h {{this.duration.minutes}}m</td>
+                                <td>{{this.comment}}</td>
+                                {{#if ../user}}
+                                <td>
+                                    <a href="/tasks/edit/{{this._id}}" class="btn btn-outline-info">Edit</a>
+                                    <a href="/tasks/delete/{{this._id}}" class="btn btn-outline-warning" onclick="return confirmDeletion();">Delete</a>
+                                </td>
+                                {{/if}}
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Your JavaScript code here -->
+    <script>
+        // JavaScript to handle the category filter
+        const categoryFilter = document.getElementById('category-filter');
+        categoryFilter.addEventListener('change', function () {
+            const selectedCategory = categoryFilter.value;
+            // Reload the page with the selected category as a query parameter
+            window.location.href = `/tasks?category=${encodeURIComponent(selectedCategory)}`;
+        });
+    </script>
+</body>
+</html>

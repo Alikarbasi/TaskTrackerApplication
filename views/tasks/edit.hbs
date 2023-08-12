@@ -1,0 +1,34 @@
+<h1>{{title}}</h1>
+<form method="post">
+    <fieldset>
+        <label for="date">Date: </label>
+        <input type="date" name="date" id="date"  required value="{{toShortDate task.date}}" />
+    </fieldset>
+    <fieldset>
+        <label for="category" class="col-2">
+      Category:
+        </label>
+        <select name="category" id="course">
+        {{#each categories}}
+           {{createOption this.name ../task.category }}
+        {{/each}}
+        </select>
+    </fieldset>
+    <fieldset>
+        <label name="name" id="name">Name: </label>
+        <input name="name" id="name" required value="{{task.name}}"/>
+    </fieldset>
+       <fieldset>
+        <label for="hours">Duration (HH:MM): </label>
+        <input type="number" name="hours" id="hours" min="0" required value="{{task.duration.hours}}"/> :
+        <input type="number" name="minutes" id="minutes" min="0" max="59" required value="{{task.duration.minutes}}"/>
+      </fieldset>
+
+       <fieldset>
+        <label for="comment">Comment: </label>
+        <textarea name="comment" id="comment" rows="4" cols="50" value="{{task.comment}}"></textarea>
+    </fieldset>
+
+    <button class="offset-3 btn btn-primary">Submit</button>
+</form>
+

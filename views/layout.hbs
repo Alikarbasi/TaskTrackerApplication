@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{{title}}</title>
+
+  {{!-- reference to script to able to reuse it --}}
+  <script src="/javascripts/scripts.js"></script>
+
+  {{!-- add Bootstrap https://www.bootstrapcdn.com/ --}}
+
+
+  <link href="
+https://cdn.jsdelivr.net/npm/bootswatch@5.3.1/dist/cerulean/bootstrap.min.css
+" rel="stylesheet">
+ <link rel="stylesheet" href="/stylesheets/style.css">
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+        aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="/tasks">Tasks
+              <span class="visually-hidden">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/categories">Categories</a>
+          </li>
+
+
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          {{#if user}}
+          <li class="nav-item"><a class="nav-link" href="#">{{user.username}}</a></li>
+          <li class="nav-item"><a class="nav-link" href="/Logout">Logout</a></li>
+          {{else}}
+          <li class="nav-item"><a class="nav-link" href="/Register">Register</a></li>
+          <li class="nav-item"><a class="nav-link" href="/Login">Login</a></li>
+          {{/if}}
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+
+
+  {{{body}}}
+  {{!-- Add bootstrap --}}
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+</body>
+<footer>
+  <p>&copy; 2023 Task Tracker App. All rights reserved.</p>
+</footer>
+
+</html>

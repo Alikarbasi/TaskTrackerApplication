@@ -1,0 +1,42 @@
+<h1 id= "addTaskHead">Create a New Task<h1>
+
+<body id="addBody">
+  <div id="addDiv">
+    <form method="post">
+      <fieldset>
+        <label for="date">Date: </label>
+        <input type="date" name="date" id="date" value="{{ today }}" required />
+      </fieldset>
+      <fieldset>
+        <label for="category">
+          Category:
+        </label>
+        <select name="category" id="category" class="mb-1">
+          {{#each categories}}
+          <option>{{this.name}}</option>
+          {{/each}}
+        </select>
+      </fieldset>
+      <fieldset>
+        <label name="name" id="name">Name: </label>
+        <input name="name" id="name" />
+      </fieldset>
+
+      <fieldset>
+        <label for="hours">Duration (HH:MM): </label>
+        <input type="number" name="hours" id="hours" min="0" required /> :
+        <input type="number" name="minutes" id="minutes" min="0" max="59" required />
+      </fieldset>
+
+      <fieldset>
+        <label for="comment">Comment: </label>
+        <textarea name="comment" id="comment" rows="4" cols="50"></textarea>
+      </fieldset>
+
+      <button class="offset-3 btn btn-primary">Submit</button>
+    </form>
+  </div>
+</body>
+
+
+<script src="/javascripts/add-scripts.js"></script>

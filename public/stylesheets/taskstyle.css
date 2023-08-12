@@ -1,0 +1,19 @@
+body {
+  background-image: url('https://assets.website-files.com/634681057b887c6f4830fae2/6367dd6185ecb40246a15a58_6259f61650a8c8088d4a7a8a_Android-Note-Apps.png'); 
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  margin: 0; 
+  padding: 0px; 
+  background-repeat: no-repeat;
+
+  
+}
+#introduction{
+    color: white;
+   
+   
+    text-align: center;
+}
+#cards{
+  text-align: center;
+}
